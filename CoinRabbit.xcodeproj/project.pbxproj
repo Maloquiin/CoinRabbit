@@ -7,15 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0A3126C237CD92C71586355 /* Pods_CoinRabbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5F03D6AD22C4D93A604CDB /* Pods_CoinRabbit.framework */; };
+		CFBAE2F8291A9F7A002A897E /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAE2F7291A9F7A002A897E /* News.swift */; };
+		CFBAE2FA291AACC2002A897E /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAE2F9291AACC2002A897E /* NewsTableViewController.swift */; };
+		CFBAE2FC291AAEED002A897E /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAE2FB291AAEED002A897E /* NewsCell.swift */; };
+		CFBAE2FE291ADB93002A897E /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAE2FD291ADB93002A897E /* Charts.swift */; };
 		CFDCA2C02919875D007C8A21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCA2BF2919875D007C8A21 /* AppDelegate.swift */; };
 		CFDCA2C22919875D007C8A21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCA2C12919875D007C8A21 /* SceneDelegate.swift */; };
 		CFDCA2C42919875D007C8A21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCA2C32919875D007C8A21 /* ViewController.swift */; };
 		CFDCA2C72919875D007C8A21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDCA2C52919875D007C8A21 /* Main.storyboard */; };
 		CFDCA2C92919875F007C8A21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDCA2C82919875F007C8A21 /* Assets.xcassets */; };
 		CFDCA2CC2919875F007C8A21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFDCA2CA2919875F007C8A21 /* LaunchScreen.storyboard */; };
+		CFDCA2D429198813007C8A21 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCA2D329198813007C8A21 /* Coin.swift */; };
+		CFDCA2D62919A0CD007C8A21 /* MainbCoinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCA2D52919A0CD007C8A21 /* MainbCoinTableViewController.swift */; };
+		CFDCA2D82919A5B9007C8A21 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCA2D72919A5B8007C8A21 /* CoinCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A5F03D6AD22C4D93A604CDB /* Pods_CoinRabbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinRabbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E35FA445D0C4300713874F /* Pods-CoinRabbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinRabbit.debug.xcconfig"; path = "Target Support Files/Pods-CoinRabbit/Pods-CoinRabbit.debug.xcconfig"; sourceTree = "<group>"; };
+		CFBAE2F7291A9F7A002A897E /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		CFBAE2F9291AACC2002A897E /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		CFBAE2FB291AAEED002A897E /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		CFBAE2FD291ADB93002A897E /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
 		CFDCA2BC2919875D007C8A21 /* CoinRabbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinRabbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDCA2BF2919875D007C8A21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFDCA2C12919875D007C8A21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +38,10 @@
 		CFDCA2C82919875F007C8A21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFDCA2CB2919875F007C8A21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFDCA2CD2919875F007C8A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFDCA2D329198813007C8A21 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		CFDCA2D52919A0CD007C8A21 /* MainbCoinTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainbCoinTableViewController.swift; sourceTree = "<group>"; };
+		CFDCA2D72919A5B8007C8A21 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
+		F4BA49E482F43ADD59F81315 /* Pods-CoinRabbit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinRabbit.release.xcconfig"; path = "Target Support Files/Pods-CoinRabbit/Pods-CoinRabbit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A3126C237CD92C71586355 /* Pods_CoinRabbit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34B15A51636BF6E6007919CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A5F03D6AD22C4D93A604CDB /* Pods_CoinRabbit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F53353289D9DCD894745869 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79E35FA445D0C4300713874F /* Pods-CoinRabbit.debug.xcconfig */,
+				F4BA49E482F43ADD59F81315 /* Pods-CoinRabbit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CFDCA2B32919875D007C8A21 = {
 			isa = PBXGroup;
 			children = (
 				CFDCA2BE2919875D007C8A21 /* CoinRabbit */,
 				CFDCA2BD2919875D007C8A21 /* Products */,
+				4F53353289D9DCD894745869 /* Pods */,
+				34B15A51636BF6E6007919CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +94,20 @@
 		CFDCA2BE2919875D007C8A21 /* CoinRabbit */ = {
 			isa = PBXGroup;
 			children = (
+				CFDCA2D52919A0CD007C8A21 /* MainbCoinTableViewController.swift */,
 				CFDCA2BF2919875D007C8A21 /* AppDelegate.swift */,
 				CFDCA2C12919875D007C8A21 /* SceneDelegate.swift */,
 				CFDCA2C32919875D007C8A21 /* ViewController.swift */,
+				CFDCA2D329198813007C8A21 /* Coin.swift */,
+				CFDCA2D72919A5B8007C8A21 /* CoinCell.swift */,
+				CFBAE2F7291A9F7A002A897E /* News.swift */,
+				CFBAE2FB291AAEED002A897E /* NewsCell.swift */,
+				CFBAE2FD291ADB93002A897E /* Charts.swift */,
 				CFDCA2C52919875D007C8A21 /* Main.storyboard */,
 				CFDCA2C82919875F007C8A21 /* Assets.xcassets */,
 				CFDCA2CA2919875F007C8A21 /* LaunchScreen.storyboard */,
 				CFDCA2CD2919875F007C8A21 /* Info.plist */,
+				CFBAE2F9291AACC2002A897E /* NewsTableViewController.swift */,
 			);
 			path = CoinRabbit;
 			sourceTree = "<group>";
@@ -74,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFDCA2D02919875F007C8A21 /* Build configuration list for PBXNativeTarget "CoinRabbit" */;
 			buildPhases = (
+				203FC07D530BAC7635DCAABB /* [CP] Check Pods Manifest.lock */,
 				CFDCA2B82919875D007C8A21 /* Sources */,
 				CFDCA2B92919875D007C8A21 /* Frameworks */,
 				CFDCA2BA2919875D007C8A21 /* Resources */,
+				768968D9294C772055C254BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +180,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		203FC07D530BAC7635DCAABB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoinRabbit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		768968D9294C772055C254BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinRabbit/Pods-CoinRabbit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinRabbit/Pods-CoinRabbit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinRabbit/Pods-CoinRabbit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFDCA2B82919875D007C8A21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CFDCA2C42919875D007C8A21 /* ViewController.swift in Sources */,
+				CFBAE2FC291AAEED002A897E /* NewsCell.swift in Sources */,
+				CFDCA2D62919A0CD007C8A21 /* MainbCoinTableViewController.swift in Sources */,
 				CFDCA2C02919875D007C8A21 /* AppDelegate.swift in Sources */,
+				CFDCA2D429198813007C8A21 /* Coin.swift in Sources */,
+				CFBAE2FA291AACC2002A897E /* NewsTableViewController.swift in Sources */,
+				CFBAE2F8291A9F7A002A897E /* News.swift in Sources */,
+				CFDCA2D82919A5B9007C8A21 /* CoinCell.swift in Sources */,
+				CFBAE2FE291ADB93002A897E /* Charts.swift in Sources */,
 				CFDCA2C22919875D007C8A21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +378,7 @@
 		};
 		CFDCA2D12919875F007C8A21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79E35FA445D0C4300713874F /* Pods-CoinRabbit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -293,8 +390,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +409,7 @@
 		};
 		CFDCA2D22919875F007C8A21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4BA49E482F43ADD59F81315 /* Pods-CoinRabbit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,8 +421,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
