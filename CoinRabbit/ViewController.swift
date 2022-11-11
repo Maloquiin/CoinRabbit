@@ -21,9 +21,8 @@ class ViewController: UIViewController, ChartViewDelegate {
     @IBOutlet var priceBtcLabel: UILabel!
     @IBOutlet var VolumeLabel: UILabel!
     
-    @IBOutlet var change1hLabel: UILabel!
     @IBOutlet var change1dLabel: UILabel!
-    @IBOutlet var change1wLabel: UILabel!
+    @IBOutlet var coinImage: CachImageView!
     
     override func viewWillAppear(_ animated: Bool) {
         getCharts()
@@ -82,7 +81,7 @@ extension ViewController{
         change1dLabel.layer.masksToBounds = true
         change1dLabel.layer.cornerRadius = 5
         change1dLabel.textColor = .white
-        
+        coinImage.fetchImage(from: coin.icon ?? "")
 //        DispatchQueue.global().async {
 //            guard let stringUrl = self.coin.icon,
 //                  let imageURL = URL(string: stringUrl),

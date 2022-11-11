@@ -17,15 +17,30 @@ enum URLApi: String{
 class MainbCoinTableViewController: UITableViewController {
     
     var coins = [Coin]()
+    var refControl = UIRefreshControl()
     
     override func viewWillAppear(_ animated: Bool) {
         getCoins()
     }
     
     override func viewDidLoad() {
-        tableView.separatorStyle = .none;
         super.viewDidLoad()
+        tableView.separatorStyle = .none;
+        refControl.attributedTitle = NSAttributedString(string: "Идет обновление...")
+        refControl.addTarget(self, action: #selector(handleRefresh(refreshControl:)), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refControl)
     }
+    
+    @objc func handleRefresh(refreshControl: UIRefreshControl) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) { // We add a 1-second delay for the pull to refresh animation because the UI will glitch otherwise and won't look nice
+            self.getCoins()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                refreshControl.endRefreshing()
+            }
+        }
+    }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coins.count

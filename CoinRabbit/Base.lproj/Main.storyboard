@@ -129,27 +129,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGL-6l-k6I">
-                                <rect key="frame" x="16" y="212" width="46" height="22"/>
+                                <rect key="frame" x="16" y="160" width="46" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgz-yF-Nfv">
-                                <rect key="frame" x="16" y="242" width="48" height="24"/>
+                                <rect key="frame" x="16" y="190" width="48" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pha-uf-mvl">
-                                <rect key="frame" x="16" y="155" width="343" height="32"/>
-                                <segments>
-                                    <segment title="Обзор"/>
-                                    <segment title="График"/>
-                                    <segment title="Биржи"/>
-                                </segments>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.00 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDO-Yx-29o">
-                                <rect key="frame" x="293" y="236" width="66" height="36"/>
+                                <rect key="frame" x="293" y="184" width="66" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Xvh-OE-RlH"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="66" id="yy7-mO-Tov"/>
@@ -158,40 +150,54 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgE-aS-gQO">
-                                <rect key="frame" x="16" y="290" width="57" height="21"/>
+                                <rect key="frame" x="16" y="238" width="57" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceBtc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEI-2v-AWe">
-                                <rect key="frame" x="16" y="319" width="64" height="21"/>
+                                <rect key="frame" x="16" y="267" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xdv-fj-TQw" customClass="CachImageView" customModule="CoinRabbit" customModuleProvider="target">
+                                <rect key="frame" x="311" y="91" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="TyJ-Mr-knd"/>
+                                    <constraint firstAttribute="width" constant="48" id="UdW-f5-Nt8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BP7-mT-Kxt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pha-uf-mvl" firstAttribute="top" secondItem="BP7-mT-Kxt" secondAttribute="top" constant="12" id="Eq7-Zr-QWJ"/>
+                            <constraint firstItem="fDO-Yx-29o" firstAttribute="top" secondItem="xdv-fj-TQw" secondAttribute="bottom" constant="45" id="9aa-hp-Ph4"/>
                             <constraint firstItem="Zgz-yF-Nfv" firstAttribute="top" secondItem="FGL-6l-k6I" secondAttribute="bottom" constant="8" symbolic="YES" id="Ezf-oD-iM1"/>
                             <constraint firstItem="dEI-2v-AWe" firstAttribute="leading" secondItem="BP7-mT-Kxt" secondAttribute="leading" constant="16" id="IgM-oZ-rm7"/>
                             <constraint firstItem="dEI-2v-AWe" firstAttribute="top" secondItem="zgE-aS-gQO" secondAttribute="bottom" constant="8" symbolic="YES" id="LXD-vx-zLf"/>
                             <constraint firstItem="zgE-aS-gQO" firstAttribute="top" secondItem="Zgz-yF-Nfv" secondAttribute="bottom" constant="24" id="MBj-eO-kds"/>
+                            <constraint firstItem="BP7-mT-Kxt" firstAttribute="trailing" secondItem="xdv-fj-TQw" secondAttribute="trailing" constant="16" id="SKP-0m-LcI"/>
+                            <constraint firstItem="FGL-6l-k6I" firstAttribute="top" secondItem="BP7-mT-Kxt" secondAttribute="top" constant="69" id="g0Y-6W-Hw7"/>
                             <constraint firstItem="zgE-aS-gQO" firstAttribute="leading" secondItem="BP7-mT-Kxt" secondAttribute="leading" constant="16" id="ipP-ua-cXS"/>
                             <constraint firstItem="BP7-mT-Kxt" firstAttribute="trailing" secondItem="fDO-Yx-29o" secondAttribute="trailing" constant="16" id="lxE-lg-yx4"/>
-                            <constraint firstItem="fDO-Yx-29o" firstAttribute="top" secondItem="pha-uf-mvl" secondAttribute="bottom" constant="50" id="ofe-0K-VCg"/>
-                            <constraint firstItem="FGL-6l-k6I" firstAttribute="top" secondItem="pha-uf-mvl" secondAttribute="bottom" constant="26" id="v02-Ys-vcZ"/>
+                            <constraint firstItem="xdv-fj-TQw" firstAttribute="top" secondItem="BP7-mT-Kxt" secondAttribute="top" id="srA-YJ-Y90"/>
                             <constraint firstItem="Zgz-yF-Nfv" firstAttribute="leading" secondItem="BP7-mT-Kxt" secondAttribute="leading" constant="16" id="wHD-CD-ihS"/>
                             <constraint firstItem="FGL-6l-k6I" firstAttribute="leading" secondItem="BP7-mT-Kxt" secondAttribute="leading" constant="16" id="wKy-Po-2Ps"/>
-                            <constraint firstItem="BP7-mT-Kxt" firstAttribute="trailing" secondItem="pha-uf-mvl" secondAttribute="trailing" constant="16" id="xJh-lv-40V"/>
-                            <constraint firstItem="pha-uf-mvl" firstAttribute="leading" secondItem="BP7-mT-Kxt" secondAttribute="leading" constant="16" id="zOA-vP-iZA"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="symbol" style="browser" id="Bcw-E2-ch2"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="VolumeLabel" destination="zgE-aS-gQO" id="zRV-hZ-GGw"/>
                         <outlet property="change1dLabel" destination="fDO-Yx-29o" id="72D-PP-udT"/>
+                        <outlet property="coinImage" destination="xdv-fj-TQw" id="316-1J-sH4"/>
                         <outlet property="nameLabel" destination="FGL-6l-k6I" id="PbG-mf-Axu"/>
                         <outlet property="priceBtcLabel" destination="dEI-2v-AWe" id="Z34-OZ-cfc"/>
                         <outlet property="priceLabel" destination="Zgz-yF-Nfv" id="DpK-ZQ-BfU"/>
@@ -278,8 +284,8 @@
             <objects>
                 <navigationController id="M6X-bL-phh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Главная" image="bitcoinsign.circle" catalog="system" id="Rtk-Dz-Uhy"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="QiT-Qf-A8p">
-                        <rect key="frame" x="0.0" y="47" width="375" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QiT-Qf-A8p">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
