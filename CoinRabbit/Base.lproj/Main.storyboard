@@ -34,7 +34,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gj8-CH-eto">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gj8-CH-eto" customClass="CachImageView" customModule="CoinRabbit" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="0.0" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="giS-yk-cIx"/>
@@ -95,7 +95,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="changeLabel" destination="Skv-04-wnD" id="Add-dR-ieU"/>
-                                    <outlet property="coinImage" destination="Gj8-CH-eto" id="eZP-Rz-2jz"/>
+                                    <outlet property="coinImage" destination="Gj8-CH-eto" id="oyg-nH-hlI"/>
                                     <outlet property="nameLabel" destination="JbC-Bq-tF7" id="QFP-wD-nrE"/>
                                     <outlet property="priceLabel" destination="LPo-JG-hQe" id="0Kp-HD-ksw"/>
                                     <outlet property="rankLabel" destination="DMA-do-KTO" id="U4g-jS-YBb"/>
@@ -129,19 +129,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGL-6l-k6I">
-                                <rect key="frame" x="16" y="160" width="46" height="22"/>
+                                <rect key="frame" x="16" y="212" width="46" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgz-yF-Nfv">
-                                <rect key="frame" x="16" y="190" width="48" height="24"/>
+                                <rect key="frame" x="16" y="242" width="48" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pha-uf-mvl">
-                                <rect key="frame" x="16" y="103" width="343" height="32"/>
+                                <rect key="frame" x="16" y="155" width="343" height="32"/>
                                 <segments>
                                     <segment title="Обзор"/>
                                     <segment title="График"/>
@@ -149,7 +149,7 @@
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.00 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDO-Yx-29o">
-                                <rect key="frame" x="293" y="184" width="66" height="36"/>
+                                <rect key="frame" x="293" y="236" width="66" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Xvh-OE-RlH"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="66" id="yy7-mO-Tov"/>
@@ -158,13 +158,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgE-aS-gQO">
-                                <rect key="frame" x="16" y="238" width="57" height="21"/>
+                                <rect key="frame" x="16" y="290" width="57" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceBtc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEI-2v-AWe">
-                                <rect key="frame" x="16" y="267" width="64" height="21"/>
+                                <rect key="frame" x="16" y="319" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -188,11 +188,8 @@
                             <constraint firstItem="pha-uf-mvl" firstAttribute="leading" secondItem="BP7-mT-Kxt" secondAttribute="leading" constant="16" id="zOA-vP-iZA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="symbol" style="browser" id="Bcw-E2-ch2">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="DmO-aY-d2z"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="symbol" style="browser" id="Bcw-E2-ch2"/>
                     <connections>
-                        <outlet property="ImageBarItem" destination="DmO-aY-d2z" id="qDb-WJ-hYO"/>
                         <outlet property="VolumeLabel" destination="zgE-aS-gQO" id="zRV-hZ-GGw"/>
                         <outlet property="change1dLabel" destination="fDO-Yx-29o" id="72D-PP-udT"/>
                         <outlet property="nameLabel" destination="FGL-6l-k6I" id="PbG-mf-Axu"/>
@@ -281,8 +278,8 @@
             <objects>
                 <navigationController id="M6X-bL-phh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Главная" image="bitcoinsign.circle" catalog="system" id="Rtk-Dz-Uhy"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QiT-Qf-A8p">
-                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="QiT-Qf-A8p">
+                        <rect key="frame" x="0.0" y="47" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

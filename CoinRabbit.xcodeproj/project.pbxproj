@@ -21,6 +21,7 @@
 		CFDCA2D429198813007C8A21 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCA2D329198813007C8A21 /* Coin.swift */; };
 		CFDCA2D62919A0CD007C8A21 /* MainbCoinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCA2D52919A0CD007C8A21 /* MainbCoinTableViewController.swift */; };
 		CFDCA2D82919A5B9007C8A21 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCA2D72919A5B8007C8A21 /* CoinCell.swift */; };
+		CFE20991291EF70600627AA9 /* CachImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE20990291EF70600627AA9 /* CachImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		CFDCA2D329198813007C8A21 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		CFDCA2D52919A0CD007C8A21 /* MainbCoinTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainbCoinTableViewController.swift; sourceTree = "<group>"; };
 		CFDCA2D72919A5B8007C8A21 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
+		CFE20990291EF70600627AA9 /* CachImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachImageView.swift; sourceTree = "<group>"; };
 		F4BA49E482F43ADD59F81315 /* Pods-CoinRabbit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinRabbit.release.xcconfig"; path = "Target Support Files/Pods-CoinRabbit/Pods-CoinRabbit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,11 +97,13 @@
 			isa = PBXGroup;
 			children = (
 				CFDCA2D52919A0CD007C8A21 /* MainbCoinTableViewController.swift */,
+				CFBAE2F9291AACC2002A897E /* NewsTableViewController.swift */,
 				CFDCA2BF2919875D007C8A21 /* AppDelegate.swift */,
 				CFDCA2C12919875D007C8A21 /* SceneDelegate.swift */,
 				CFDCA2C32919875D007C8A21 /* ViewController.swift */,
 				CFDCA2D329198813007C8A21 /* Coin.swift */,
 				CFDCA2D72919A5B8007C8A21 /* CoinCell.swift */,
+				CFE20990291EF70600627AA9 /* CachImageView.swift */,
 				CFBAE2F7291A9F7A002A897E /* News.swift */,
 				CFBAE2FB291AAEED002A897E /* NewsCell.swift */,
 				CFBAE2FD291ADB93002A897E /* Charts.swift */,
@@ -107,7 +111,6 @@
 				CFDCA2C82919875F007C8A21 /* Assets.xcassets */,
 				CFDCA2CA2919875F007C8A21 /* LaunchScreen.storyboard */,
 				CFDCA2CD2919875F007C8A21 /* Info.plist */,
-				CFBAE2F9291AACC2002A897E /* NewsTableViewController.swift */,
 			);
 			path = CoinRabbit;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				CFDCA2C42919875D007C8A21 /* ViewController.swift in Sources */,
 				CFBAE2FC291AAEED002A897E /* NewsCell.swift in Sources */,
 				CFDCA2D62919A0CD007C8A21 /* MainbCoinTableViewController.swift in Sources */,
+				CFE20991291EF70600627AA9 /* CachImageView.swift in Sources */,
 				CFDCA2C02919875D007C8A21 /* AppDelegate.swift in Sources */,
 				CFDCA2D429198813007C8A21 /* Coin.swift in Sources */,
 				CFBAE2FA291AACC2002A897E /* NewsTableViewController.swift in Sources */,

@@ -36,34 +36,27 @@ struct Coin: Codable{
     let twitterUrl: String?
     let exp: [String]?
     
-//    init(coinData: [String: Any]) {
-//        id = coinData["id"] as? String
-//        icon = coinData["icon"] as? String
-//        name = coinData["name"] as? String
-//        symbol = coinData["symbol"] as? String
-//        rank = coinData["rank"] as? String
-//        price = coinData["id"] as? String
-//        priceBtc = coinData["priceBtc"] as? String
-//        volume = coinData["volume"] as? String
-//        marketCap = coinData["marketCap"] as? String
-//        availableSupply = coinData["availableSupply"] as? String
-//        totalSupply = coinData["totalSupply"] as? String
-//        priceChange1h = coinData["priceChange1h"] as? String
-//        priceChange1d = coinData["priceChange1d"] as? String
-//        priceChange1w = coinData["priceChange1w"] as? String
-//        websiteUrl = coinData["websiteUrl"] as? String
-//        redditUrl = coinData["redditUrl"] as? String
-//        twitterUrl = coinData["twitterUrl"] as? String
-//        exp = coinData["exp"] as? [String]
-//        contractAddress = coinData["contractAddress"] as? String
-//        decimals = coinData["decimals"] as? String
-        
-    }
+}
+
+class ImageManager {
+    static var shared = ImageManager()
     
-//    static func getCoin(from value: Any) -> [Coin] {
-//        guard let coinData = value as? [[String: Any]] else { return [] }
-//        return coinData.compactMap { Coin(coinData: $0) }
-//    }
-//}
+    private init() {}
+    
+    func fetchImage(from url: URL, completion: @escaping(Data, URLResponse) -> Void) {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data, let response = response else {
+                print(error?.localizedDescription ?? "No error description")
+                return
+            }
+            
+            guard url == response.url else { return }
+            
+            completion(data, response)
+        }
+    }
+}
+
+
 
 

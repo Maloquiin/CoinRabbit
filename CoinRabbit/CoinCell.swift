@@ -9,7 +9,8 @@ import UIKit
 
 class CoinCell: UITableViewCell {
     
-    @IBOutlet var coinImage: UIImageView!
+    
+    @IBOutlet var coinImage: CachImageView!
     @IBOutlet var rankLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
@@ -26,17 +27,18 @@ class CoinCell: UITableViewCell {
             changeLabel.textColor = UIColor(red: 34/255, green: 139/255, blue: 34/255, alpha: 1)
         } else{ changeLabel.textColor = .red }
         changeLabel.text = "\(coin.priceChange1d ?? 0)%"
-        DispatchQueue.global().async {
-            guard let stringUrl = coin.icon,
-                  let imageURL = URL(string: stringUrl),
-                  let imageData = try? Data(contentsOf: imageURL) else {
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.coinImage.image = UIImage(data: imageData)
-            }
-        }
+        coinImage.fetchImage(from: coin.icon ?? "")
+//        DispatchQueue.global().async {
+//            guard let stringUrl = coin.icon,
+//                  let imageURL = URL(string: stringUrl),
+//                  let imageData = try? Data(contentsOf: imageURL) else {
+//                return
+//            }
+//
+//            DispatchQueue.main.async {
+//                self.coinImage.image = UIImage(data: imageData)
+//            }
+//        }
         
     }
     

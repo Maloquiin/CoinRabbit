@@ -24,7 +24,6 @@ class ViewController: UIViewController, ChartViewDelegate {
     @IBOutlet var change1hLabel: UILabel!
     @IBOutlet var change1dLabel: UILabel!
     @IBOutlet var change1wLabel: UILabel!
-    @IBOutlet var ImageBarItem: UIBarButtonItem!
     
     override func viewWillAppear(_ animated: Bool) {
         getCharts()
@@ -84,21 +83,17 @@ extension ViewController{
         change1dLabel.layer.cornerRadius = 5
         change1dLabel.textColor = .white
         
-        
-        
-        
-        
-        DispatchQueue.global().async {
-            guard let stringUrl = self.coin.icon,
-                  let imageURL = URL(string: stringUrl),
-                  let imageData = try? Data(contentsOf: imageURL) else {
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.ImageBarItem.image = UIImage(data: imageData)?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-            }
-        }
+//        DispatchQueue.global().async {
+//            guard let stringUrl = self.coin.icon,
+//                  let imageURL = URL(string: stringUrl),
+//                  let imageData = try? Data(contentsOf: imageURL) else {
+//                return
+//            }
+//
+//            DispatchQueue.main.async {
+//                self.ImageBarItem.image = UIImage(data: imageData)?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+//            }
+//        }
     }
     
     func getCharts() {
