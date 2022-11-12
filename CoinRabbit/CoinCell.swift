@@ -28,17 +28,18 @@ class CoinCell: UITableViewCell {
         } else{ changeLabel.textColor = .red }
         changeLabel.text = "\(coin.priceChange1d ?? 0)%"
         coinImage.fetchImage(from: coin.icon ?? "")
-//        DispatchQueue.global().async {
-//            guard let stringUrl = coin.icon,
-//                  let imageURL = URL(string: stringUrl),
-//                  let imageData = try? Data(contentsOf: imageURL) else {
-//                return
-//            }
-//
-//            DispatchQueue.main.async {
-//                self.coinImage.image = UIImage(data: imageData)
-//            }
-//        }
+        DispatchQueue.global().async {
+            guard let stringUrl = coin.icon,
+                  let imageURL = URL(string: stringUrl),
+                  let imageData = try? Data(contentsOf: imageURL) else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                self.coinImage.image = UIImage(data: imageData)
+            }
+        }
+        
         
     }
     

@@ -10,7 +10,7 @@ import UIKit
 class NewsTableViewController: UITableViewController {
 
     var news = [News]()
-    
+    var refControl = UIRefreshControl()
     
     override func viewWillAppear(_ animated: Bool) {
         getNews()
@@ -19,7 +19,20 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = UITableView.automaticDimension
+        refControl.attributedTitle = NSAttributedString(string: "Идет обновление...")
+        refControl.addTarget(self, action: #selector(handleRefresh(refreshControl:)), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refControl)
         //tableView.estimatedRowHeight = 100
+    }
+    
+    @objc func handleRefresh(refreshControl: UIRefreshControl) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) { // We add a 1-second delay for the pull to refresh animation because the UI will glitch otherwise and won't look nice
+            self.getNews()
+            DispatchQueue.main.async {
+                //self.tableView.reloadData()
+                refreshControl.endRefreshing()
+            }
+        }
     }
 
     // MARK: - Table view data source

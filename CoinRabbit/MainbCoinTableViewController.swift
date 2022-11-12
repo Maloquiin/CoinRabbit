@@ -9,8 +9,8 @@ import UIKit
 import Alamofire
 
 enum URLApi: String{
-    case mainCoin = "https://api.coinstats.app/public/v1/coins?skip=0&limit=25&currency=USD"
-    case news = "https://api.coinstats.app/public/v1/news?skip=0&limit=20"
+    case mainCoin = "https://api.coinstats.app/public/v1/coins?skip=0&limit=50&currency=USD"
+    case news = "https://api.coinstats.app/public/v1/news?skip=0&limit=25"
 }
 
 
@@ -20,7 +20,7 @@ class MainbCoinTableViewController: UITableViewController {
     var refControl = UIRefreshControl()
     
     override func viewWillAppear(_ animated: Bool) {
-        getCoins()
+        executeRepeatedly()
     }
     
     override func viewDidLoad() {
@@ -35,12 +35,19 @@ class MainbCoinTableViewController: UITableViewController {
         DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) { // We add a 1-second delay for the pull to refresh animation because the UI will glitch otherwise and won't look nice
             self.getCoins()
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                //self.tableView.reloadData()
                 refreshControl.endRefreshing()
             }
         }
     }
     
+    private func executeRepeatedly() {
+        getCoins()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 60.0) { [weak self] in
+            self?.executeRepeatedly()
+        }
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coins.count

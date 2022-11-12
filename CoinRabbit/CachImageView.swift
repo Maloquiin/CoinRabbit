@@ -8,14 +8,16 @@
 import UIKit
 
 class CachImageView: UIImageView {
-
+    
+    
+    
     func fetchImage(from url: String) {
         guard let imageURL = URL(string: url) else {
             image = UIImage(named: "picture")
             return
         }
         
-        // Загрузка изображения из кэша
+        //   Загрузка изображения из кэша
         if let cachedImage = getCachedImage(from: imageURL) {
             image = cachedImage
             return
@@ -26,6 +28,7 @@ class CachImageView: UIImageView {
             DispatchQueue.main.async {
                 self.image = UIImage(data: data)
             }
+            
             
             // Сохраним изображение в кэш
             self.saveDataToCache(with: data, and: response)
@@ -47,5 +50,6 @@ class CachImageView: UIImageView {
         let cachedResponse = CachedURLResponse(response: response, data: data)
         URLCache.shared.storeCachedResponse(cachedResponse, for: urlRequest)
     }
-
+    
+    
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B0A3126C237CD92C71586355 /* Pods_CoinRabbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5F03D6AD22C4D93A604CDB /* Pods_CoinRabbit.framework */; };
+		CF3DCEF7291F3A3F00B3AB1C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3DCEF6291F3A3F00B3AB1C /* SettingsViewController.swift */; };
 		CFBAE2F8291A9F7A002A897E /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAE2F7291A9F7A002A897E /* News.swift */; };
 		CFBAE2FA291AACC2002A897E /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAE2F9291AACC2002A897E /* NewsTableViewController.swift */; };
 		CFBAE2FC291AAEED002A897E /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBAE2FB291AAEED002A897E /* NewsCell.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		5A5F03D6AD22C4D93A604CDB /* Pods_CoinRabbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinRabbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E35FA445D0C4300713874F /* Pods-CoinRabbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinRabbit.debug.xcconfig"; path = "Target Support Files/Pods-CoinRabbit/Pods-CoinRabbit.debug.xcconfig"; sourceTree = "<group>"; };
+		CF3DCEF6291F3A3F00B3AB1C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CFBAE2F7291A9F7A002A897E /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		CFBAE2F9291AACC2002A897E /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		CFBAE2FB291AAEED002A897E /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				CFDCA2D52919A0CD007C8A21 /* MainbCoinTableViewController.swift */,
 				CFBAE2F9291AACC2002A897E /* NewsTableViewController.swift */,
+				CF3DCEF6291F3A3F00B3AB1C /* SettingsViewController.swift */,
 				CFDCA2BF2919875D007C8A21 /* AppDelegate.swift */,
 				CFDCA2C12919875D007C8A21 /* SceneDelegate.swift */,
 				CFDCA2C32919875D007C8A21 /* ViewController.swift */,
@@ -241,6 +244,7 @@
 				CFDCA2D82919A5B9007C8A21 /* CoinCell.swift in Sources */,
 				CFBAE2FE291ADB93002A897E /* Charts.swift in Sources */,
 				CFDCA2C22919875D007C8A21 /* SceneDelegate.swift in Sources */,
+				CF3DCEF7291F3A3F00B3AB1C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
