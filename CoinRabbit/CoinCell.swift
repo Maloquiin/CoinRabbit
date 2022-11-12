@@ -21,8 +21,12 @@ class CoinCell: UITableViewCell {
         nameLabel.text = coin.name
         symbolLabel.text = coin.symbol
         rankLabel.text = "\(coin.rank ?? 0)"
-        priceLabel.text = "$\(coin.price ?? 0)"
-        
+        if coin.price! < 0.05 {
+            priceLabel.text = String(format: "$%.8f", coin.price!)
+//        } else if coin.price! < 1 {
+//        priceLabel.text = String(format: "%.4f ", coin.price!)
+        } else {priceLabel.text = "$\(coin.price ?? 0)"}
+
         if coin.priceChange1d ?? 0 > 0 {
             changeLabel.textColor = UIColor(red: 34/255, green: 139/255, blue: 34/255, alpha: 1)
         } else{ changeLabel.textColor = .red }

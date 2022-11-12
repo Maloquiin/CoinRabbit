@@ -70,9 +70,29 @@ extension ViewController{
     func generatePage(){
         title = "\(coin.symbol ?? "") #\(coin.rank ?? 0)"
         nameLabel.text = coin.name
+        
+        if coin.price! < 0.05 {
+            priceLabel.text = String(format: "%.8f ", coin.price!) + "USD"
+    } else {
         priceLabel.text = "\(coin.price ?? 0) USD"
-        VolumeLabel.text = "Объем: \(coin.volume ?? 0)"
-        priceBtcLabel.text = "Цена в BTC: \(coin.priceBtc ?? 0)"
+    }
+        
+        if coin.volume! > 1000000000 {
+           let bVolume = coin.volume!/1000000000
+            VolumeLabel.text = String(format: "Объем: %.2f ", bVolume) + "Bn"
+        } else {
+            let bVolume = coin.volume!/1000000
+            VolumeLabel.text = String(format: "Объем: %.2f ", bVolume) + "Mn"
+        }
+        
+        
+        if coin.priceBtc! < 1 {
+            priceBtcLabel.text = String(format: "Цена в BTC: %.6f ", coin.priceBtc!)
+        } else {
+            priceBtcLabel.text = String(format: "Цена в BTC: %.1f ", coin.priceBtc!)
+        }
+        
+       // priceBtcLabel.text = "Цена в BTC: \(coin.priceBtc ?? 0)"
         
         if coin.priceChange1d ?? 0 > 0 {
             change1dLabel.backgroundColor = UIColor(red: 34/255, green: 139/255, blue: 34/255, alpha: 1)
@@ -82,6 +102,7 @@ extension ViewController{
         change1dLabel.layer.cornerRadius = 5
         change1dLabel.textColor = .white
         coinImage.fetchImage(from: coin.icon ?? "")
+        
 //        DispatchQueue.global().async {
 //            guard let stringUrl = self.coin.icon,
 //                  let imageURL = URL(string: stringUrl),
